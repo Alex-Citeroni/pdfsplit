@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdfsplit"
+version = "0.1.0"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+description = "Split PDF files into fixed-size page chunks via CLI and Python API"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["pdf", "split", "pymupdf", "fitz"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "pymupdf>=1.24",
+  "typer>=0.12",
+  "tqdm>=4.66",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourname/pdfsplit"
+Issues = "https://github.com/yourname/pdfsplit/issues"
+
+[project.scripts]
+pdfsplit = "pdfsplit.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pdfsplit"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+addopts = "-q"
