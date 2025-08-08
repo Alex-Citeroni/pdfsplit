@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import fitz
-from src.pdfsplit.core import split_pdf
+from pdfsplit.core import split_pdf
 
 
 def _make_pdf(path: Path, pages: int) -> None:
