@@ -45,5 +45,5 @@ print(paths)
 ## Development
 ```bash
 ruff check .
-pytest
+python -m pytest -q
 ```
